@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio | Ricardo Russo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com" rel="stylesheet">
+    <style>
+        /* Estilização da Barra de Deslize (Scrollbar) */
+        .custom-scroll::-webkit-scrollbar {
+            width: 8px;
+        }
+        .custom-scroll::-webkit-scrollbar-track {
+            background: #f1f5f9;
+            border-radius: 10px;
+        }
+        .custom-scroll::-webkit-scrollbar-thumb {
+            background: #4f46e5;
+            border-radius: 10px;
+        }
+        .custom-scroll::-webkit-scrollbar-thumb:hover {
+            background: #4338ca;
+        }
+
+        .profile-img {
+            filter: grayscale(100%);
+            transition: all 0.4s ease;
+        }
+        .profile-img:hover {
+            filter: grayscale(0%);
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans h-screen flex flex-col">
+
+    <!-- Header Fixo -->
+    <header class="bg-indigo-950 text-white py-8 px-4 shadow-xl shrink-0">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-6">
+            <div class="w-32 h-32 md:w-40 md:h-40 shrink-0 border-4 border-indigo-400 rounded-full overflow-hidden shadow-2xl">
+                <img src="perfil.jpg" alt="Ricardo Russo" class="profile-img w-full h-full object-cover">
+            </div>
+            <div class="text-center md:text-left">
+                <h1 class="text-3xl md:text-5xl font-bold mb-2">Ricardo Russo</h1>
+                <p class="text-lg text-indigo-300 font-light italic">Técnico de Integração de Sistemas | Programador | Formador</p>
+                <div class="flex flex-wrap justify-center md:justify-start gap-4 mt-4 text-xs">
+                    <span class="bg-indigo-900/50 px-3 py-1 rounded-full border border-indigo-700"><i class="fas fa-phone mr-2"></i>910 682 940</span>
+                    <span class="bg-indigo-900/50 px-3 py-1 rounded-full border border-indigo-700"><i class="fas fa-envelope mr-2"></i>ingaya@gmail.com</span>
+                    <span class="bg-indigo-900/50 px-3 py-1 rounded-full border border-indigo-700"><i class="fas fa-map-marker-alt mr-2"></i>Porto</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Área de Conteúdo com Scroll -->
+    <main class="max-w-6xl mx-auto w-full p-4 md:p-8 grid grid-cols-1 md:grid-cols-3 gap-8 overflow-hidden flex-grow">
+        
+        <!-- Coluna Fixa (Esquerda) -->
+        <div class="space-y-6 overflow-y-auto custom-scroll pr-2">
+            <section class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+                <h2 class="text-lg font-bold mb-4 flex items-center gap-2 text-indigo-700">
+                    <i class="fas fa-code"></i> Skills Tech
+                </h2>
+                <div class="flex flex-wrap gap-2">
+                    <span class="bg-indigo-600 text-white text-[10px] font-bold px-2 py-1 rounded">PHP</span>
+                    <span class="bg-indigo-600 text-white text-[10px] font-bold px-2 py-1 rounded">JAVA</span>
+                    <span class="bg-indigo-600 text-white text-[10px] font-bold px-2 py-1 rounded">JAVASCRIPT</span>
+                    <span class="bg-indigo-600 text-white text-[10px] font-bold px-2 py-1 rounded">SQL</span>
+                    <span class="bg-slate-100 text-slate-700 text-[10px] font-bold px-2 py-1 rounded">SAP-JUMP</span>
+                </div>
+            </section>
+
+            <section class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+                <h2 class="text-lg font-bold mb-4 text-indigo-700"><i class="fas fa-graduation-cap mr-2"></i>Educação</h2>
+                <div class="space-y-4 text-sm">
+                    <div class="border-l-2 border-indigo-500 pl-3">
+                        <p class="font-bold">12º Ano de Escolaridade Nível III</p>
+                        <p class="text-indigo-600 text-xs">Concluido 2023</p>
+                        <p class="font-bold">12º Ano de Escolaridade Nível IV</p>
+                        <p class="text-indigo-600 text-xs">Previsão 2026</p>
+                    </div>
+                    <div class="border-l-2 border-slate-300 pl-3">
+                        <p class="font-bold text-slate-700 italic text-xs">Técnico Integração Sistemas</p>
+                        <p class="text-slate-400 text-[10px]">Educatic | 2005</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="bg-indigo-600 text-white p-6 rounded-2xl shadow-lg">
+                <h2 class="text-lg font-bold mb-2"><i class="fas fa-certificate mr-2"></i>Outras Competências </h2>
+                <p class="text-sm font-medium">Curso de Formação de Formadores concluído com sucesso em 2024.</p>
+            </section>
+        </div>
+
+        <!-- Coluna Principal com Barra de Deslize (Direita) -->
+        <div class="md:col-span-2 bg-white rounded-2xl shadow-sm border border-slate-200 flex flex-col overflow-hidden">
+            <div class="p-6 border-b border-slate-100 bg-slate-50/50">
+                <h2 class="text-xl font-bold text-slate-800 flex items-center gap-3">
+                    <i class="fas fa-briefcase text-indigo-600"></i> Experiência & Percurso Profissional
+                </h2>
+            </div>
+            
+            <!-- A BARRA DE DESLIZE ATUA NESTA DIV -->
+            <div class="p-6 overflow-y-auto custom-scroll flex-grow space-y-8">
+                
+                <!-- Experiência 1 -->
+                <div class="relative pl-6 border-l-2 border-indigo-500">
+                    <div class="absolute -left-[7px] top-0 w-3 h-3 bg-indigo-600 rounded-full"></div>
+                    <div class="flex justify-between items-start">
+                        <h3 class="font-bold text-indigo-900">Assistente de BackOffice (E-redes)</h3>
+                        <span class="text-[10px] bg-indigo-100 text-indigo-700 px-2 py-1 rounded">2011 - 2024</span>
+                    </div>
+                    <p class="text-sm text-slate-600 mt-2 leading-relaxed">
+                        Análise de dados e apoio técnico. Especialista em software Sap-Jump para o setor energético e gestão de bases de dados.
+                    </p>
+                </div>
+
+                <!-- Experiência 2 -->
+                <div class="relative pl-6 border-l-2 border-slate-200">
+                    <div class="absolute -left-[7px] top-0 w-3 h-3 bg-slate-300 rounded-full"></div>
+                    <div class="flex justify-between items-start">
+                        <h3 class="font-bold text-slate-800">Supervisão (ZON TVCabo)</h3>
+                        <span class="text-[10px] bg-slate-100 text-slate-500 px-2 py-1 rounded">2009 - 2011</span>
+                    </div>
+                    <p class="text-sm text-slate-600 mt-2 leading-relaxed">
+                        Supervisão não-técnica, formação "On-Job" e gestão de conflitos em ambiente de telecomunicações.
+                    </p>
+                </div>
+
+                <!-- Experiência 3 -->
+                <div class="relative pl-6 border-l-2 border-slate-200">
+                    <div class="absolute -left-[7px] top-0 w-3 h-3 bg-slate-300 rounded-full"></div>
+                    <h3 class="font-bold text-slate-800">Operação de Comunicação (ZON)</h3>
+                    <p class="text-sm text-slate-600 mt-1 italic">2007 - 2009</p>
+                    <p class="text-sm text-slate-600 mt-2">Comunicador técnico e gestão de clientes.</p>
+                </div>
+
+                <!-- Experiência 4 -->
+                <div class="relative pl-6 border-l-2 border-slate-200">
+                    <div class="absolute -left-[7px] top-0 w-3 h-3 bg-slate-300 rounded-full"></div>
+                    <h3 class="font-bold text-slate-800">Indústria Semicondutores (Qimonda)</h3>
+                    <p class="text-sm text-slate-600 mt-2">Tratamento da wafer de sílica em Chip - Sector Inbound (2006-2007).</p>
+                </div>
+
+                <!-- Experiência 5 -->
+                <div class="relative pl-6 border-l-2 border-slate-200">
+                    <div class="absolute -left-[7px] top-0 w-3 h-3 bg-slate-300 rounded-full"></div>
+                    <h3 class="font-bold text-slate-800">Técnico Informática Independente</h3>
+                    <p class="text-sm text-slate-600 mt-2 leading-relaxed">
+                        Instalação de SO Windows, segurança (remoção de vírus) e recuperação de sistemas/discos (2006-2007).
+                    </p>
+                </div>
+
+                <!-- Experiência 6 -->
+                <div class="relative pl-6 border-l-2 border-slate-200">
+                    <div class="absolute -left-[7px] top-0 w-3 h-3 bg-slate-300 rounded-full"></div>
+                    <h3 class="font-bold text-slate-800">Técnico Comercial (Alto Rendimento, Lda)</h3>
+                    <p class="text-sm text-slate-600 mt-2 leading-relaxed">
+                        Manutenção de hardware e software em sistemas Microsoft (1998-2000).
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-slate-900 text-slate-500 py-3 text-center text-[10px] shrink-0">
+        Ricardo Russo &copy; 2024-2026 | Porto, Portugal
+    </footer>
+
+</body>
+</html>
