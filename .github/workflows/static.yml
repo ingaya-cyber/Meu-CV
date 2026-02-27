@@ -1,11 +1,9 @@
 name: Deploy CV
-
 on:
   push:
-    branches: ["main"] # Garante que este é o nome da tua branch principal
+    branches: ["main"]
   workflow_dispatch:
 
-# Adicionado o bloco de permissões necessário para o GitHub Pages
 permissions:
   contents: read
   pages: write
@@ -20,16 +18,15 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        
       - name: Setup Pages
-        uses: actions/setup-pages@main
-        
+        uses: actions/configure-pages@v5 # Correção aqui
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@main
+        uses: actions/upload-pages-artifact@v3
         with:
-          path: '.' # Publica tudo o que está na raiz do repo
-          
+          path: '.' 
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
 
+          
+     
