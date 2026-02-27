@@ -25,7 +25,7 @@ jobs:
         uses: actions/setup-pages@main
         
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@main
         with:
           path: '.' # Publica tudo o que está na raiz do repo
           
